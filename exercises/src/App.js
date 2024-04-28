@@ -1,4 +1,5 @@
 import First from './components/First';
+import Fragment from './components/Fragment';
 import MinMax from './components/MinMax';
 import RandomNumber from './components/RandomNumber';
 
@@ -15,10 +16,14 @@ import { View, StyleSheet } from 'react-native';
 export default function App() {
   return (
     <View style={styles.app}>
-      <First />
+      {/* <First />
       <MinMax min={5} max={8} />
       <MinMax min={10} max={100} />
-      <RandomNumber min={0} max={1000} />
+      <RandomNumber min={0} max={1000} /> */}
+      <Fragment 
+        title="This is the main title"
+        subtitle="My subtitle"
+      />
     </View>
   ); 
 }
