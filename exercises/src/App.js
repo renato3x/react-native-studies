@@ -1,3 +1,4 @@
+import AppButton from './components/AppButton';
 import First from './components/First';
 import Fragment from './components/Fragment';
 import MinMax from './components/MinMax';
@@ -20,10 +21,11 @@ export default function App() {
       <MinMax min={5} max={8} />
       <MinMax min={10} max={100} />
       <RandomNumber min={0} max={1000} /> */}
-      <Fragment 
+      {/* <Fragment 
         title="This is the main title"
         subtitle="My subtitle"
-      />
+      /> */}
+      <AppButton/>
     </View>
   ); 
 }
