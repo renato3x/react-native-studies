@@ -1,4 +1,5 @@
 import AppButton from './components/AppButton';
+import Counter from './components/Counter';
 import First from './components/First';
 import Fragment from './components/Fragment';
 import MinMax from './components/MinMax';
@@ -25,7 +26,9 @@ export default function App() {
         title="This is the main title"
         subtitle="My subtitle"
       /> */}
-      <AppButton/>
+      {/* <AppButton/> */}
+      <Counter/>
+      <Counter initial={0} step={5}/>
     </View>
   ); 
 }
