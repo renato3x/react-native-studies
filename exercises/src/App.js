@@ -8,6 +8,7 @@ import RandomNumber from './components/RandomNumber';
 import { View, StyleSheet } from 'react-native';
 import DirectRoot from './components/direct/Root';
 import IndirectRoot from './components/indirect/Root';
+import CounterV2 from './components/counterv2/CounterV2';
 
 // View -> Componente base para a visualização dos outros componentes
 // Text -> Onde colocamos os textos da aplicação mobile
@@ -31,8 +32,9 @@ export default function App() {
       {/* <AppButton/> */}
       {/* <Counter/>
       <Counter initial={0} step={5}/> */}
-      <DirectRoot/>
-      <IndirectRoot/>
+      {/* <DirectRoot/>
+      <IndirectRoot/> */}
+      <CounterV2/>
     </View>
   ); 
 }
