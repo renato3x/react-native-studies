@@ -1,10 +1,18 @@
-import { Text } from 'react-native';
-import styles from '../styles';
+import { Button, Text } from 'react-native';
+import { faker } from '@faker-js/faker';
 
-export default function Child({ x, y }) {
+export default function Child({ min, max, onShowValue }) {
+  function generateNumber(min, max) {
+    const value = faker.number.int({ min, max });
+    onShowValue(value);
+  }
+
   return (
     <>
-      <Text style={styles.text}>{ x }, { y }</Text>
+      <Button
+        title="Execute"
+        onPress={() => generateNumber(min, max)}
+      />
     </>
   )
 }
