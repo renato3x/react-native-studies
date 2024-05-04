@@ -5,7 +5,7 @@ import Fragment from './components/Fragment';
 import MinMax from './components/MinMax';
 import RandomNumber from './components/RandomNumber';
 
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, SafeAreaView, Platform, StatusBar } from 'react-native';
 import DirectRoot from './components/direct/Root';
 import IndirectRoot from './components/indirect/Root';
 import CounterV2 from './components/counterv2/CounterV2';
@@ -14,6 +14,8 @@ import Differentiate from './components/Differentiate';
 import RelationsRoot from './components/relations/Root';
 import RelationsChild from './components/relations/Child';
 import LoggedUser from './components/LoggedUser';
+import ProductsList from './components/products/ProductsList';
+import ProductsList2 from './components/products/ProductsList2';
 
 // View -> Componente base para a visualização dos outros componentes
 // Text -> Onde colocamos os textos da aplicação mobile
@@ -25,7 +27,7 @@ import LoggedUser from './components/LoggedUser';
 
 export default function App() {
   return (
-    <View style={styles.app}>
+    <SafeAreaView style={styles.app}>
       {/* <First />
       <MinMax min={5} max={8} />
       <MinMax min={10} max={100} />
@@ -48,13 +50,15 @@ export default function App() {
         <RelationsChild name="LOUD" lastName="Saadhak"/>
         <RelationsChild name="LEV" lastName="aspas"/>
       </RelationsRoot> */}
-      <LoggedUser
+      {/* <LoggedUser
         user={{
           name: 'Renato',
           email: 'pereirarenato21@gmail.com',
         }}
-      />
-    </View>
+      /> */}
+      {/* <ProductsList/> */}
+      <ProductsList2/>
+    </SafeAreaView>
   ); 
 }
 
@@ -63,5 +67,6 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
   }
 })
