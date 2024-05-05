@@ -23,6 +23,7 @@ import FlexBoxV1 from './components/layout/FlexBoxV1';
 import FlexBoxV2 from './components/layout/FlexBoxV2';
 import FlexBoxV3 from './components/layout/FlexBoxV3';
 import FlexBoxV4 from './components/layout/FlexBoxV4';
+import Mega from './components/mega/Mega';
 
 // View -> Componente base para a visualização dos outros componentes
 // Text -> Onde colocamos os textos da aplicação mobile
@@ -69,7 +70,8 @@ export default function App() {
       {/* <FlexBoxV1/> */}
       {/* <FlexBoxV2/> */}
       {/* <FlexBoxV3/> */}
-      <FlexBoxV4/>
+      {/* <FlexBoxV4/> */}
+      <Mega quantity={12}/>
     </SafeAreaView>
   ); 
 }
