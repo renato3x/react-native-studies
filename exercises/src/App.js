@@ -16,6 +16,7 @@ import RelationsChild from './components/relations/Child';
 import LoggedUser from './components/LoggedUser';
 import ProductsList from './components/products/ProductsList';
 import ProductsList2 from './components/products/ProductsList2';
+import TypeYourName from './components/TypeYourName';
 
 // View -> Componente base para a visualização dos outros componentes
 // Text -> Onde colocamos os textos da aplicação mobile
@@ -57,7 +58,8 @@ export default function App() {
         }}
       /> */}
       {/* <ProductsList/> */}
-      <ProductsList2/>
+      {/* <ProductsList2/> */}
+      <TypeYourName />
     </SafeAreaView>
   ); 
 }
